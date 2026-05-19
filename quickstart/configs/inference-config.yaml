@@ -42,7 +42,5 @@ workers:
         - OPTIONS
   - name: inference-worker
     worker_path: ./workers/inference-worker
-  - name: caller-worker
-    worker_path: ./workers/caller-worker
-  - name: math-worker
-    worker_path: /home/ni3/devops-projects/hiring/may-2026/devops/quickstart/workers/inference-worker
+  
+  
