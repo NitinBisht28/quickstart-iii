@@ -257,34 +257,6 @@ During deployment several issues were encountered and resolved:
 
 ---
 
-# Production Hardening
-
-Before using this in production, the following improvements would be added:
-
-* HTTPS/TLS termination
-* Authentication and authorization
-* Centralized logging
-* Monitoring and alerting
-* Autoscaling
-* Secret management
-* CI/CD pipeline automation
-* Health checks and service supervision
-* Containerized deployment
-
----
-
-# Scaling Considerations
-
-If the model size increased significantly:
-
-* GPU instances would be required
-* Quantization/sharding strategies would be necessary
-* Kubernetes orchestration would help scale inference workers
-* Dedicated model-serving infrastructure would likely be introduced
-* Distributed inference scheduling would become important
-
----
-
 # Technologies Used
 
 * AWS EC2
