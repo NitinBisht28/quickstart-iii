@@ -1,13 +1,19 @@
 #!/bin/bash
 
-cd ~/quickstart
+set -e
+
+export PATH="$HOME/.local/bin:$PATH"
+
+cd ~/quickstart-iii/quickstart
+
+echo "Starting iii engine..."
 
 iii --config configs/caller-config.yaml &
 
 sleep 5
 
-cd workers/caller-worker
+echo "Starting caller-worker..."
 
-export III_URL=ws://localhost:49134
+cd ~/quickstart-iii/quickstart/workers/caller-worker
 
 npm run dev
