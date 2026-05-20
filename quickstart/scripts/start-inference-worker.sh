@@ -1,9 +1,13 @@
 #!/bin/bash
 
-cd ~/quickstart/workers/inference-worker
+set -e
 
-source venv/bin/activate
+export PATH="$HOME/.local/bin:$PATH"
 
-export III_URL=ws://10.0.2.116:49134 # i have used ny caller ip here , replace with ur own
+export III_URL=ws://10.0.2.251:49134
 
-python inference_worker.py
+cd ~/quickstart-iii/quickstart/workers/inference-worker
+
+source .venv/bin/activate
+
+python3 inference_worker.py
