@@ -186,9 +186,7 @@ curl -X POST http://<PUBLIC-IP>:3111/v1/chat/completions \
 
 ```json
 {
-  "result": {
-    "success": "You've connected two workers and they're interoperating seamlessly, now let's add a few more workers to expand this project's functionality."
-  }
+  "result": "Hello! How can I help you today?"
 }
 ```
 
@@ -254,6 +252,39 @@ During deployment several issues were encountered and resolved:
 * Python dependency management
 * Cross-VM worker communication setup
 * Environment variable configuration for distributed workers
+
+---
+
+# Production Hardening
+
+Before deploying this system in production, the following improvements would be implemented:
+
+* HTTPS/TLS termination for secure API communication
+* Authentication and authorization for API access
+* Centralized logging and monitoring
+* Autoscaling for worker infrastructure
+* Health checks and automatic service recovery
+* Secret management using AWS Secrets Manager or Vault
+* Containerized deployment using Docker/Kubernetes
+* CI/CD pipeline automation
+* Rate limiting and request validation
+* Persistent distributed storage instead of in-memory state
+
+---
+
+# Scaling Considerations
+
+If the model size increased significantly (100x larger), the following architectural changes would likely be required:
+
+* GPU-based inference instances instead of CPU-only VMs
+* Model quantization and tensor parallelism
+* Distributed model serving across multiple nodes
+* Kubernetes orchestration for scaling and scheduling
+* Dedicated inference gateways/load balancers
+* Shared model cache/storage systems
+* Asynchronous request queues for high throughput
+* Horizontal scaling of inference workers
+* Observability tooling for latency and throughput optimization
 
 ---
 
